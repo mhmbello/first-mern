@@ -9,10 +9,10 @@ export const Item = (props) => {
       <p>{props.name}</p>
       <div className="item-prices">
         <div className="item-price-new">
-          GNF{props.new_price}
+          GNF {props.new_price}
         </div>
         <div className="item-price-old">
-            GNF{props.old_price}
+            GNF {props.old_price}
         </div>
       </div>
     </div>

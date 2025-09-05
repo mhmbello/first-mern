@@ -15,6 +15,11 @@ export const ShopCategory = (props) => {
         </p>
         <div className="shopcategory-sort">
           Sort by <img src={dropdown_icon} alt="" />
+          <select>
+            <option value="featured">Featured</option>
+            <option value="lowest">Price: Low to High</option>
+            <option value="highest">Price: High to Low</option>
+          </select>
         </div>
       </div>
         <div className="shopcategory-products">

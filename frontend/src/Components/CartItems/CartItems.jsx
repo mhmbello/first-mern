@@ -22,9 +22,9 @@ export const CartItems = () => {
                 <div className="cartitems-format cartitems-format-main">
                     <img src={e.image} alt="" className='carticon-product-icon'/>
                     <p>{e.name}</p>
-                    <p>GNF{e.new_price}</p>
+                    <p>GNF {e.new_price}</p>
                     <button className='cartitems-quantity'>{cartItems[e.id]}</button>
-                    <p>GNF{e.new_price * cartItems[e.id]}</p>
+                    <p>GNF {e.new_price * cartItems[e.id]}</p>
                     <img className='cartitems-remove-icon' src={remove_icon} onClick={() => removeFromCart(e.id)} alt="" />
                 </div>
                 <hr />
@@ -38,7 +38,7 @@ export const CartItems = () => {
                 <div>
                     <div className="cartitems-total-item">
                         <p>Sous-total</p>
-                        <p>GNF{getTotalCartAmount()}</p>
+                        <p>GNF {getTotalCartAmount()}</p>
                     </div>
                     <hr />
                     <div className="cartitems-total-item">
@@ -48,7 +48,7 @@ export const CartItems = () => {
                     <hr />
                     <div className="cartitems-total-item">
                         <h3>Total</h3>
-                        <h3>GNF{getTotalCartAmount()}</h3>
+                        <h3>GNF {getTotalCartAmount()}</h3>
                     </div>
                 </div>
                 <button>PROCEED TO CHECKOUT</button>
