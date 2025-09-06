@@ -17,7 +17,8 @@ exports.removeProduct = async (req, res) => {
 
 exports.getAllProducts = async (req, res) => {
   let products = await Product.find({});
-  res.json(products);
+  console.log("All Products Fetched");
+  res.send(products);
 };
 
 exports.importProducts = async (req, res) => {
@@ -33,4 +34,16 @@ exports.importProducts = async (req, res) => {
   await Product.insertMany(productsWithId);
 
   res.json({ success: true, count: productsWithId.length });
+};
+
+exports.popularInWomen = async (req, res) => {
+  let products = await Product.find({ category: "women" });
+  let popular_in_women = products.slice(0, 4);
+  res.send(popular_in_women);
+};
+
+exports.newCollections = async (req, res) => {
+  let products = await Product.find({});
+  let newcollection =products.slice(1).slice(-8);
+  res.send(newcollection)
 };

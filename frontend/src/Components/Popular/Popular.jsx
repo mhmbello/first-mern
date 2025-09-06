@@ -7,7 +7,7 @@ export const Popular = () => {
   const [popularInWomen, setPopularInWomen] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("http://localhost:4000/popularinwomen")
+    fetch("http://localhost:4000/api/products/popularinwomen")
       .then(res => res.json())
       .then(data => setPopularInWomen(data));
   }, []);

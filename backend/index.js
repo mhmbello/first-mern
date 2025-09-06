@@ -5,6 +5,7 @@ const path = require("path");
 require("dotenv").config();
 
 const connectDB = require("./config/db");
+const cartRoutes = require("./routes/cartRoutes");
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
 
@@ -17,6 +18,11 @@ app.use(cors());
 
 // DB
 connectDB();
+
+// Api express
+app.get("/", (req, res) => {
+  res.send("Express App is running");
+});
 
 // Images statiques
 app.use("/images", express.static("upload/images"));
